@@ -39,6 +39,35 @@
         <section id="books">
             <h2>Books</h2>
             <p>Check out my children's book on Amazon.</p>
+            <!-- Add this to your Books or Galleries page -->
+<form action="/create-checkout-session" method="POST">
+    <button type="submit">Buy Now</button>
+</form>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe('your-publishable-key-here');
+    const checkoutButton = document.querySelector('button');
+
+    checkoutButton.addEventListener('click', () => {
+        fetch('/create-checkout-session', {
+            method: 'POST',
+        })
+        .then(response => response.json())
+        .then(session => {
+            return stripe.redirectToCheckout({ sessionId: session.id });
+        })
+        .then(result => {
+            if (result.error) {
+                alert(result.error.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
         </section>
 
         <section id="contact">
