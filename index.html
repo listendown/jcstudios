@@ -4,93 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Camp - Artist Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Joseph Camp</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#galleries">Galleries</a></li>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#books">Books</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galleries.html">Galleries</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="books.html">Books</a></li>
             </ul>
         </nav>
+        <h1>Joseph Camp</h1>
     </header>
 
     <main>
-        <section id="home">
-            <h2>Welcome to My Art Portfolio</h2>
-            <p>Explore my diverse range of artworks and projects.</p>
+        <section class="slideshow">
+            <div class="slides">
+                <img src="image1.jpg" alt="Artwork 1">
+                <img src="image2.jpg" alt="Artwork 2">
+                <img src="image3.jpg" alt="Artwork 3">
+            </div>
         </section>
 
-        <section id="galleries">
-            <h2>Galleries</h2>
-            <!-- Gallery content will go here -->
-        </section>
-
-        <section id="bio">
-            <h2>Bio</h2>
-            <p>Joseph Camp is an innovative and skilled artist...</p>
-        </section>
-
-        <section id="books">
-            <h2>Books</h2>
-            <p>Check out my children's book on Amazon.</p>
-            <!-- Add this to your Books or Galleries page -->
-<form action="/create-checkout-session" method="POST">
-    <button type="submit">Buy Now</button>
-</form>
-
-<script src="https://js.stripe.com/v3/"></script>
-<script>
-    const stripe = Stripe('your-publishable-key-here');
-    const checkoutButton = document.querySelector('button');
-
-    checkoutButton.addEventListener('click', () => {
-        fetch('/create-checkout-session', {
-            method: 'POST',
-        })
-        .then(response => response.json())
-        .then(session => {
-            return stripe.redirectToCheckout({ sessionId: session.id });
-        })
-        .then(result => {
-            if (result.error) {
-                alert(result.error.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-</script>
-
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Connect with me on social media or send a message.</p>
+        <section class="intro">
+            <div class="intro-item">
+                <img src="intro1.jpg" alt="Intro Image 1">
+                <p>Explore my diverse range of artworks and projects.</p>
+            </div>
+            <div class="intro-item">
+                <img src="intro2.jpg" alt="Intro Image 2">
+                <p>Discover the stories behind my creations.</p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <!-- Add this to the footer section in your HTML -->
-<div class="social-media">
-    <a href="https://www.instagram.com/yourprofile" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-    <a href="https://www.opensea.io/yourprofile" target="_blank"><img src="opensea-icon.png" alt="Opensea"></a>
-    <a href="https://www.etsy.com/shop/yourshop" target="_blank"><img src="etsy-icon.png" alt="Etsy"></a>
-    <!-- Add more social media icons as needed -->
-</div>
-
-        <p>© 2024 Joseph Camp. All rights reserved.</p>
+        <p>© 2024 Joseph Camp Studios. All rights reserved.</p>
+        <p>6569 Birch Walk Dr., Memphis, TN 38115 | (901) 596-7365 | joseph@josephcamp.com</p>
         <div class="social-media">
-            <!-- Social media icons will go here -->
+            <a href="https://www.instagram.com/jcamplistendown" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://www.opensea.io/yourprofile" target="_blank"><img src="opensea-icon.png" alt="Opensea"></a>
+            <a href="https://www.etsy.com/shop/yourshop" target="_blank"><img src="etsy-icon.png" alt="Etsy"></a>
         </div>
     </footer>
 
     <script src="scripts.js"></script>
 </body>
 </html>
+
