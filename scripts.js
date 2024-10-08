@@ -1,11 +1,12 @@
-// scripts.js
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('nav ul li a');
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slides img');
+    const showSlides = () => {
+        slides.forEach((slide, index) => {
+            slide.style.display = (index === slideIndex) ? 'block' : 'none';
         });
-    });
+        slideIndex = (slideIndex + 1) % slides.length;
+        setTimeout(showSlides, 3000);
+    };
+    showSlides();
 });
