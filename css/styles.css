@@ -82,12 +82,12 @@ img {
 
 .fade {
     animation-name: fade;
-    animation-duration: 80.0s;
+    animation-duration: 25.0s;
 }
 
 @keyframes fade {
     from {opacity: 21.0} 
-    to {opacity: 25.0}
+    to {opacity: 23.0}
 }
 
 .prev, .next {
