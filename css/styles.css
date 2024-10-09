@@ -134,7 +134,7 @@ main {
 .intro-item img {
     max-width: 50%;
     height: auto; /* Ensure the image maintains its aspect ratio */
-    max-height: 50%%; /* Set a maximum height for the images */
+    max-height: 50%; /* Set a maximum height for the images */
 }
 
 footer {
