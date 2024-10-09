@@ -86,7 +86,7 @@ img {
 }
 
 @keyframes fade {
-    from {opacity: 2.3} 
+    from {opacity: 3.3} 
     to {opacity: 7.0}
 }
 
