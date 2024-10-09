@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #d0e7f9;
+    background-color: #d0e7f9; /* Original header color */
     padding: 1rem;
     text-align: center;
     position: fixed;
@@ -123,7 +123,7 @@ main {
 }
 
 footer {
-    background-color: #a7d8de;
+    background-color: #a7d8de; /* Original footer color */
     color: #fff;
     text-align: center;
     padding: 1rem;
