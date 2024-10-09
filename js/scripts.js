@@ -1,5 +1,6 @@
+let slideIndex = 0; // Define slideIndex in the global scope
+
 document.addEventListener('DOMContentLoaded', () => {
-    let slideIndex = 0;
     const slides = document.querySelectorAll('.mySlides');
     const showSlides = () => {
         slides.forEach((slide, index) => {
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function plusSlides(n) {
-    let slides = document.querySelectorAll('.mySlides');
+    const slides = document.querySelectorAll('.mySlides');
     slideIndex += n;
     if (slideIndex >= slides.length) { slideIndex = 0; }
     if (slideIndex < 0) { slideIndex = slides.length - 1; }
@@ -20,3 +21,4 @@ function plusSlides(n) {
         slide.style.display = (index === slideIndex) ? 'block' : 'none';
     });
 }
+
