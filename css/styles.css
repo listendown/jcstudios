@@ -47,9 +47,9 @@ header h1 {
 
 .slideshow-container {
     position: relative;
-    max-width: 800px;
+    max-width: 400px;
     height: auto; /* Ensure the image maintains its aspect ratio */
-    max-height: 800px; /* Set a maximum height for the images */
+    max-height: 400px; /* Set a maximum height for the images */
     margin: auto;
     padding-top: 4rem; /* Adjust padding to ensure slideshow is visible below fixed header */
 }
@@ -59,9 +59,9 @@ header h1 {
 }
 
 .mySlides img {
-    width: 800px;
+    width: 400px;
     height: auto; /* Ensure the image maintains its aspect ratio */
-    max-height: 800px; /* Set a maximum height for the images */
+    max-height: 400px; /* Set a maximum height for the images */
     object-fit: cover; /* Ensure the image covers the container without squishing */
 }
 
